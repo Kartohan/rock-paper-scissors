@@ -65,13 +65,19 @@ function game() {
 }
 
 function playerPlay(){
-    do {choice = prompt('Choose rock, paper, or scissors', '').toLowerCase();
+    let choice;
+    do {choice = prompt('Write Rock, Paper or Scissors', '');
+    if (choice === null) continue;
+    choice = choice.toLowerCase();
     if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
         break;
     }
-    }
+    if (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors') {
+        alert('Pick Rock, Paper or Scissors')
+    }}
     while (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors');
     return choice;
+    
 }
 
 
