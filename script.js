@@ -4,7 +4,7 @@ function computerPlay() {
     return choices[~~(Math.random() * choices.length)]
 }
 
-function round (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) {
     let result;
     if (playerSelection == computerSelection) {
         result = "Tie";
@@ -31,8 +31,73 @@ function round (playerSelection, computerSelection) {
         }
     }
 }
+function playerSelection(){
+    let game;
+    let retry = document.querySelector('#retry');
+    let computerScore = 0;
+    let playerScore = 0;
+    let playerText = document.querySelector('.player');
+    let computerText = document.querySelector('.computer');
+    let resultText = document.querySelector('.result')
+    let buttons = document.querySelectorAll('.button')
+        buttons.forEach( button => {
+            button.addEventListener('click', function playGame(){
+                if (playerScore === 5 || computerScore === 5) {
+                    return;
+                }
+                game = playRound(button.id,computerPlay())
+                resultText.innerText = game;
+                if (game === 'Win'){
+                playerScore++;
+                playerText.innerText = playerScore;
+                resultText.innerText = `Player ${game} round!`;
+                } else if (game === 'Lose') {
+                computerScore++;
+                computerText.innerText = computerScore;
+                resultText.innerText = `Player ${game} round!`;
+                } else if (game === 'Tie') {
+                resultText.innerText = `${game} round!`;
+                }
+                if (playerScore === 5){
+                resultText.innerText = 'Player Wins the Game!';
+                retry.classList.remove("visible");
+                } else if (computerScore === 5){
+                resultText.innerText = 'Computer Wins the Game!';
+                retry.classList.remove("visible");
+                }
+            })
+        })
+    retry.addEventListener('click', () => {
+        playerText.innerText = 0;
+        computerText.innerText = 0;
+        computerScore = 0;
+        playerScore = 0;
+        resultText.innerText = '';
+        retry.classList.add("visible");
+    })
+}
 
-function game() {
+
+playerSelection();
+/*function playerPlay(){
+    let choice;
+    do {choice = prompt('Write Rock, Paper or Scissors', '');
+    if (choice === null) continue;
+    choice = choice.toLowerCase();
+    if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
+        break;
+    }
+    if (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors') {
+        alert('Pick Rock, Paper or Scissors')
+    }}
+    while (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors');
+    return choice;
+    
+}
+
+
+
+/*function game() {
     let playerScore = 0;
     let computerScore = 0;
     for (let i = 0; i < 5; i++) {
@@ -63,22 +128,4 @@ function game() {
         alert("Tie game");
     }
 }
-
-function playerPlay(){
-    let choice;
-    do {choice = prompt('Write Rock, Paper or Scissors', '');
-    if (choice === null) continue;
-    choice = choice.toLowerCase();
-    if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
-        break;
-    }
-    if (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors') {
-        alert('Pick Rock, Paper or Scissors')
-    }}
-    while (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors');
-    return choice;
-    
-}
-
-
-game();
+*/
