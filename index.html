@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="game">
+    <h1>Welcome to Rock-Paper-Scissors Game!</h1>
+    <p>Rules of the game:<br>
+        Scissors beat Paper<br>
+        Paper beats Stone<br>
+        Stone beats Scissors<br>
+        The remaining options lose to each other<br>
+        The computer will randomly select from the options<br>
+        Play up to 5 rounds!<br>
+        Let the game begin!</p>
+    <button class="button" id="rock">Rock</button>
+    <button class="button" id="paper">Paper</button>
+    <button class="button" id="scissors">Scissors</button>
+    <div class="score">Player <span class="player">0</span> : <span class="computer">0</span> Computer</div>
+    <div class="result"></div>
+    <button id="retry" class="visible">Retry?</button>
+</div>
 </body>
+<script src="script.js"></script>
 </html>
