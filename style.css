@@ -1,7 +1,6 @@
 * {
     font-family: Ubuntu, Comfortaa, sans-serif;
 }
-
 .visible {
     display: none;
 }
@@ -10,42 +9,39 @@
     flex-direction: column;
     align-items: center;
 }
+#retry {
+    width: 200px;
+    font-size: 25px;
+    height: 50px;
+    transition: .5s;
+    border-radius: 5px;
+}
 button {
     margin: 10px;
-    width: 150px;
+    width: 100px;
     font-size: 25px;
-    flex-basis: 50px;
+    height: 100px;
     transition: .5s;
     border-radius: 5px;
     border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 button#rock {
-    background-image: url(./img/rock.jpeg);
-    color:white;
+    background-image: url(./img/rock.png);
 }
 button#paper {
-    background-image: url(./img/paper.jpg);
+    background-image: url(./img/paper.png);
 }
 button#scissors {
-    background-image: url(./img/scissors.jpg);
-    color:white;
-}
-button#rock:hover {
-    color: #ffffff00;
-}
-button#paper:hover {
-    color: #ffffff00;
-}
-button#scissors:hover {
-    color: #ffffff00;
+    background-image: url(./img/scissors.png);
 }
 button:hover {
-    box-shadow: 0px 0px 7px 0px #000000;
+    box-shadow: 0px 0px 4px 0px #000000;
 }
 button:active {
-    box-shadow: inset 0px 0px 7px 0px #000000;
+    box-shadow: inset 0px 0px 4px 0px #000000;
 }
-
 .score {
     font-size: 25px;
 }
@@ -54,4 +50,38 @@ button:active {
 }
 div p {
     text-align: center;
+}
+.rock {
+    background-image: url(./img/rock.png);
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.paper {
+    background-image: url(./img/paper.png);
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.scissors {
+    background-image: url(./img/scissors.png);
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#playerPlay,#computerPlay {
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gamefield {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

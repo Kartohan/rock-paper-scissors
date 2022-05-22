@@ -16,9 +16,20 @@
         The computer will randomly select from the options<br>
         Play up to 5 rounds!<br>
         Let the game begin!</p>
-    <button class="button" id="rock">Rock</button>
-    <button class="button" id="paper">Paper</button>
-    <button class="button" id="scissors">Scissors</button>
+    <div class="gamefield">
+        <div>Player</div>
+        <div id="playerPlay" class="">?</div>
+        <span>vs</span>
+        <div id="computerPlay" class="">?</div>
+        <div>Computer</div>
+    </div>
+    <h2 class="resultRound"></h2>
+    <div class="buttons">
+        <button class="button" id="rock"></button>
+        <button class="button" id="paper"></button>
+        <button class="button" id="scissors"></button>
+    </div>
+    <div>Score:</div>
     <div class="score">Player <span class="player">0</span> : <span class="computer">0</span> Computer</div>
     <div class="result"></div>
     <button id="retry" class="visible">Retry?</button>
