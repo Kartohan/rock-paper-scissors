@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors by Kartohan</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,10 +31,12 @@
         <button class="button" id="paper"></button>
         <button class="button" id="scissors"></button>
     </div>
-    <div>Score:</div>
-    <div class="score">Player <span class="player">0</span> : <span class="computer">0</span> Computer</div>
-    <div class="result"></div>
-    <button id="retry" class="visible">Retry?</button>
+    <div class="resultbox">
+        <div class="scoretext">Score:</div>
+        <div class="score">Player <span class="player">0</span> : <span class="computer">0</span> Computer</div>
+        <div class="result"></div>
+        <button id="retry" class="visible">Retry?</button>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>

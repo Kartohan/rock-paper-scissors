@@ -1,13 +1,13 @@
 * {
-    font-family: Ubuntu, Comfortaa, sans-serif;
+    font-family: Ubuntu, sans-serif;
 }
 .visible {
     display: none;
 }
 .game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+h1, h2, .resultbox, .buttons {
+    text-align: center;
 }
 #retry {
     width: 200px;
@@ -51,6 +51,24 @@ button:active {
 div p {
     text-align: center;
 }
+#playerPlay,#computerPlay {
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gamefield {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.rules {
+    text-align: center;
+}
+/* Gamefield images */
 .rock {
     background-image: url(./img/rock.png);
     height: 100px;
@@ -71,20 +89,4 @@ div p {
     width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
-}
-#playerPlay,#computerPlay {
-    height: 100px;
-    width: 100px;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.gamefield {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.rules {
-    text-align: center;
 }
