@@ -4,7 +4,8 @@
 .visible {
     display: none;
 }
-.game {
+.gamefield p, .gamefield span {
+    font-size: 2rem;
 }
 h1, h2, .resultbox, .buttons {
     text-align: center;
@@ -43,6 +44,9 @@ button:active {
     box-shadow: inset 0px 0px 4px 0px #000000;
 }
 .score {
+    font-size: 25px;
+}
+.scoretext {
     font-size: 25px;
 }
 .result {
