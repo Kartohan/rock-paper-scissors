@@ -6,6 +6,7 @@
 }
 .gamefield p, .gamefield span {
     font-size: 2rem;
+    margin: 0;
 }
 h1, h2, .resultbox, .buttons {
     text-align: center;
@@ -94,4 +95,13 @@ div p {
     width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+@media screen and (max-width: 530px) {
+    .gamefield {
+        display: flex;
+        flex-direction: column;
+    }
+    .rules {
+        margin-bottom: 25px;
+    }
 }
