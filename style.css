@@ -27,6 +27,7 @@ button {
     border: none;
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 button#rock {
     background-image: url(./img/rock.png);
