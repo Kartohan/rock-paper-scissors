@@ -217,4 +217,7 @@ div p {
         height: 80px;
         width: 80px;
     }
+    body {
+        height: 100%;
+    }
 }
