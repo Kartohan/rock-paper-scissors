@@ -125,15 +125,6 @@ div p {
     background-size: contain;
     background-repeat: no-repeat;
 }
-@media screen and (max-width: 530px) {
-    .gamefield {
-        display: flex;
-        flex-direction: column;
-    }
-    .rules {
-        margin-bottom: 25px;
-    }
-}
 
 /* The Modal (background) */
 .modal {
@@ -185,3 +176,44 @@ div p {
     text-decoration: none;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 530px) {
+    .gamefield {
+        display: flex;
+        flex-direction: column;
+    }
+    .rules {
+        margin-bottom: 25px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .game {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px 10px;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+    .modal-content h2 {
+        font-size: 1.5em;
+    }
+    .modal-content {
+        width: 90%;
+    }
+    .modal-content p {
+        font-size: 0.9em;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    body {
+        height: 100%;
+    }
+    .result {
+        font-size: 25px;
+    }
+}
