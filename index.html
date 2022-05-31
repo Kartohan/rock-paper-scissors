@@ -9,36 +9,43 @@
 </head>
 <body>
     <div class="game">
-    <h1>Welcome to Rock-Paper-Scissors Game!</h1>
-    <div class="rules">
-        Rules of the game:<br>
-            Scissors beat Paper<br>
+    <div class="container">
+        <h1>Welcome to Rock-Paper-Scissors Game!</h1>
+        <button id="rulesBtn">Rules info</button>
+        <div id="rulesModal" class="modal">
+          <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Rules</h2>
+        <p> Scissors beats Paper<br>
             Paper beats Stone<br>
             Stone beats Scissors<br>
             The remaining options lose to each other<br>
             The computer will randomly select from the options<br>
             Play up to 5 rounds!<br>
-            Let the game begin!
-    </div>
-    <div class="gamefield">
-        <p>Player</p>
-        <div id="playerPlay" class="">?</div>
-        <span>vs</span>
-        <div id="computerPlay" class="">?</div>
-        <p>Computer</p>
-    </div>
-    <h2 class="resultRound"></h2>
-    <div class="buttons">
-        <button class="button" id="rock"></button>
-        <button class="button" id="paper"></button>
-        <button class="button" id="scissors"></button>
-    </div>
-    <div class="resultbox">
-        <div class="scoretext">Score:</div>
-        <div class="score">Player <span class="player">0</span> : <span class="computer">0</span> Computer</div>
-        <div class="result"></div>
-        <button id="retry" class="visible">Retry?</button>
+            Let the game begin!</p>
+          </div>
+        
         </div>
+        <div class="gamefield">
+            <p>Player</p>
+            <div id="playerPlay" class="">?</div>
+            <span>vs</span>
+            <div id="computerPlay" class="">?</div>
+            <p>Computer</p>
+        </div>
+        <h2 class="resultRound">Select Rock Paper or Scissors</h2>
+        <div class="buttons">
+            <button class="button" id="rock"></button>
+            <button class="button" id="paper"></button>
+            <button class="button" id="scissors"></button>
+        </div>
+        <div class="resultbox">
+            <div class="scoretext">Score:</div>
+            <div class="score">Player <span class="player">0</span> : <span class="computer">0</span> Computer</div>
+            <div class="result"></div>
+            <button id="retry" class="visible">Retry?</button>
+            </div>
+    </div>
     </div>
 </body>
 <script src="script.js"></script>

@@ -110,59 +110,24 @@ function play(){
         computerfield.innerText = '?';
         playerfield.className = '';
         computerfield.className = '';
-        resultRound.innerText = '';
+        resultRound.innerText = 'Select Rock Paper or Scissors';
     })
 }
 
 play();
 
-/*function playerPlay(){
-    let choice;
-    do {choice = prompt('Write Rock, Paper or Scissors', '');
-    if (choice === null) continue;
-    choice = choice.toLowerCase();
-    if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
-        break;
-    }
-    if (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors') {
-        alert('Pick Rock, Paper or Scissors')
-    }}
-    while (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors');
-    return choice;
-    
-}
+let modal = document.querySelector('.modal')
+let modalBtn = document.querySelector('#rulesBtn')
+let closeModal = document.querySelector('.close')
 
-
-
-/*function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        computerSelection = computerPlay();
-        playerSelection = playerPlay();
-        let result = round(playerSelection, computerSelection);
-        if (result === "Win") {
-            playerScore++;
-            console.log(("You " + result + "! Your score is: " + playerScore));
-            alert("You " + result + "! Your score is: " + playerScore)
-        } else if (result === "Lose") {
-            computerScore++;
-            console.log(("You " + result + "! Computer score is: " + computerScore));
-            alert("You " + result + "! Computer score is: " + computerScore)
-        } else if (result === "Tie") {
-            console.log((result + " round!"));
-            alert(result + " round!")
-        }
+modalBtn.addEventListener('click', () => {
+    modal.style.display = "block";
+})
+closeModal.addEventListener('click', () => {
+    modal.style.display = "none"
+})
+window.addEventListener('click', (e) => {
+    if (e.target == modal) {
+        modal.style.display = "none"
     }
-    if (playerScore > computerScore) {
-        console.log("You Win this game!");
-        alert("You Win this game!");
-    } else if (playerScore < computerScore) {
-        console.log("You Lose! Try again!");
-        alert("You Lose! Try again!");
-    } else if (playerScore = computerScore) {
-    console.log("Tie game");
-        alert("Tie game");
-    }
-}
-*/
+})
