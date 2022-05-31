@@ -189,7 +189,7 @@ div p {
         font-size: 1.5em;
     }
     .game {
-        padding: 100px;
+        padding: 10px;
     }
     .container {
         padding: 15px 10px;
@@ -218,6 +218,6 @@ div p {
         width: 80px;
     }
     body {
-        height: 100%;
+        height: 100vh;
     }
 }
