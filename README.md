@@ -11,3 +11,6 @@ To be honest, i copied most of *Modal* code from the [W3Schools Modal Lesson](ht
 ~~*Reminder: i need to complete this game because it is still didn't work like i want to*~~
 
 Link - https://kartohan.github.io/rock-paper-scissors/
+
+Preview
+![screencapture-kartohan-github-io-rock-paper-scissors-2022-12-04-16_55_48](https://user-images.githubusercontent.com/99285514/205497889-a6ebaa56-f9b5-43a7-bbd6-7dc76f6cc2c3.png)
